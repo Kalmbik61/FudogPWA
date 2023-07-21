@@ -1,0 +1,16 @@
+@import "../../styles/variables.scss";
+
+.header {
+  background-color: $color_primary;
+  @include offset_padding;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .title {
+    color: #fff;
+    font-family: $FF_open;
+    margin: 0;
+  }
+}
