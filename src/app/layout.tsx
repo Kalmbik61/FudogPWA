@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "../styles/globals.scss";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
+import { wrapper } from "@/store";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,11 +13,7 @@ export const metadata: Metadata = {
   description: "Китайская кухня в центре Ростов-на-Дону",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
       <body className={inter.className}>
@@ -27,3 +24,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default RootLayout;
